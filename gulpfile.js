@@ -28,7 +28,7 @@ gulp.task('build-basic', function() {
     .pipe( concat('squel-basic.js') )
     .pipe( replace(/<<VERSION_STRING>>/i, SQUEL_VERSION) )
     .pipe( babel({
-      presets: ['es2015']
+      presets: ['react-native']
     }) )
     .pipe( umd({
       exports: function (file) {
@@ -56,7 +56,7 @@ gulp.task('build-full', function() {
     .pipe( concat('squel.js') )
     .pipe( replace(/<<VERSION_STRING>>/i, SQUEL_VERSION) )
     .pipe( babel({
-      presets: ['es2015']
+      presets: ['react-native']
     }) )
     .pipe( umd({
       exports: function (file) {
